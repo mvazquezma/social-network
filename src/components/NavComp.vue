@@ -8,13 +8,19 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-            <router-link to="/" class="nav-link active" aria-current="page">Home</router-link>
+            <router-link to="/" class="nav-link active" aria-current="page">
+                <span class="material-icons">home</span>
+            </router-link>
         </li>
         <li class="nav-item">
-            <router-link to="/about" class="nav-link">About</router-link>
+            <router-link to="/about" class="nav-link">
+                <span class="material-icons">info</span>
+            </router-link>
         </li>
         <li class="nav-item">
-            <router-link to="/posts" class="nav-link">Posts</router-link>
+            <router-link to="/posts" class="nav-link">
+                <span class="material-icons">featured_play_list</span>
+            </router-link>
         </li>
       </ul>
     </div>
