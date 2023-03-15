@@ -11,22 +11,29 @@
       </div>
       <div class="col-lg-6">
         <card-comp :btns="btnArray" class="mx-auto card-comp">
-          <form>
-            <div class="mb-3 mt-2">
-              <input
-                type="email"
-                class="form-control"
-                placeholder="Escribe tu email"
-              />
-            </div>
-            <div class="mb-3 mt-2">
-              <input
-                type="password"
-                class="form-control"
-                placeholder="Escribe tu contraseña"
-              />
-            </div>
-          </form>
+          <template #default>
+            <form>
+              <div class="mb-3 mt-2">
+                <input
+                  type="email"
+                  class="form-control"
+                  placeholder="Escribe tu email"
+                />
+              </div>
+              <div class="mb-3 mt-2">
+                <input
+                  type="password"
+                  class="form-control"
+                  placeholder="Escribe tu contraseña"
+                />
+              </div>
+            </form>
+          </template>
+
+          <template #footer>
+            <hr>
+            <button class="btn btn-success">Sign up</button>
+          </template>
         </card-comp>
       </div>
     </div>
@@ -50,8 +57,8 @@ export default {
           class: 'btn-primary',
         },
         {
-          txt: 'Remove',
-          class: 'btn-danger',
+          txt: 'Olvidaste tu contraseña?',
+          class: '',
         }
       ]
     }
@@ -60,6 +67,11 @@ export default {
 </script>
 
 <style scoped>
+h2 {
+  max-width: 470px;
+  margin: auto;
+  font-size: 1.8rem;
+}
 .home {
   max-width: 895px;
   margin: auto;
@@ -72,6 +84,14 @@ img {
   max-width: 315px;
   margin: 1em auto 0 auto;
 }
+.card-comp {
+  max-width: 398px;
+}
+.btn-success {
+  margin: auto;
+  min-width: 195px;
+}
+
 @media (min-width: 992px) {
   .home {
     margin: 4em auto;
@@ -83,9 +103,12 @@ img {
   h2 {
     text-align: left;
   }
+  .card-comp {
+    margin-top: 3rem;
+  }
 }
 .card-comp {
   max-width: 398px;
-  margin-top: 2.6em;
+  margin-top: 2em;
 }
 </style>

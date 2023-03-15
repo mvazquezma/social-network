@@ -5,7 +5,7 @@
       <p v-if="description" class="card-text">
        {{ description }}
       </p>
-      <slot></slot>
+      <slot name="default"></slot>
       <div class="d-grid gap-2">
         <button 
           v-for="btn in btns" 
@@ -15,6 +15,7 @@
         >
           {{ btn.txt }}
         </button>
+        <slot name="footer"></slot>
       </div>
     </div>
   </div>
