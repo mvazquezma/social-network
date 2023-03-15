@@ -5,6 +5,7 @@
       <p v-if="description" class="card-text">
        {{ description }}
       </p>
+      <img v-if="picture" :src="picture" alt="post img">
       <slot name="default"></slot>
       <div class="d-grid gap-2">
         <button 
@@ -24,12 +25,15 @@
 <script>
 export default {
   name: 'CardComp',
-  props: ['title', 'description', 'btns']
+  props: ['title', 'description', 'btns', 'picture']
 };
 </script>
 <style scoped>
     .card {
         border: none;
         box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
+    }
+    img {
+      width: 100%;
     }
 </style>
