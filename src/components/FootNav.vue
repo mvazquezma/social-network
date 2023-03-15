@@ -26,7 +26,11 @@
 
 <style scoped>
     footer {
-        will-change: 100%;
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0
     }
     img {
         max-width: 55px;
@@ -41,14 +45,5 @@
     }
     .router-link {
         text-decoration: none;
-    }
-
-    @media (min-width: 768px) {
-        footer {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-        }
     }
 </style>
