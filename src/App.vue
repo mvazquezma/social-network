@@ -1,6 +1,10 @@
 <template>
   <NavComp />
-  <router-view/>
+  <router-view v-slot="{Component}">
+    <transition name="fadeUp" mode="out-in">
+      <component :is="Component" :key="$route.path"></component>
+    </transition>
+  </router-view>
   <FootNav />
 </template>
 
@@ -20,5 +24,14 @@ export default {
 <style>
 #app {
   color: #2c3e50;
+}
+.fadeUp-enter-active,
+.fadeUp-leave-active {
+  transition: opacity .25s, transform 0.25s;
+}
+.fadeUp-enter,
+.fadeUp-leave-to {
+  opacity: 0;
+  transform: translateY(30%);
 }
 </style>
